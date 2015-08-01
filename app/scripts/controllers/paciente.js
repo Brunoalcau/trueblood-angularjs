@@ -9,12 +9,7 @@
  */
 angular.module('projetoFortesApp')
   .controller('PacienteCtrl', function($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
+   
     $scope.paciente = {
       "Nome": "Paciente",
       "Hospital": {
