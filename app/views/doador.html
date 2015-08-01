@@ -17,51 +17,14 @@
 				</div>
 			</header>
 			<div class="itens">
-				
-				<div class="item col-md-6 col-lg-6">
+				<div class="item col-lg-6" ng-click="alert(paciente.Id)"  ng-repeat="paciente in listaPaciente">
 					<div class="info">
 						<div class="row">
-							<div class="tipo col-lg-3">O-</div>
-							<div class="texto col-lg-8">
-								<span class="nome">Francisco Humbertolino da Silva</span>
-								<span class="hospital">Hospital blah blah</span>
-								<span class="cidade">Fortaleza, CE</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item col-md-6 col-lg-6">
-					<div class="info">
-						<div class="row">
-							<div class="tipo col-lg-3">AB+</div>
-							<div class="texto col-lg-8">
-								<span class="nome">Francisco Humbertolino da Silva</span>
-								<span class="hospital">Hospital blah blah</span>
-								<span class="cidade">Fortaleza, CE</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item col-md-6 col-lg-6">
-					<div class="info">
-						<div class="row">
-							<div class="tipo col-lg-3">A-</div>
-							<div class="texto col-lg-8">
-								<span class="nome">Francisco Humbertolino da Silva</span>
-								<span class="hospital">Hospital blah blah</span>
-								<span class="cidade">Fortaleza, CE</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item col-md-6 col-lg-6">
-					<div class="info">
-						<div class="row">
-							<div class="tipo col-lg-3">B+</div>
-							<div class="texto col-lg-8">
-								<span class="nome">Francisco Humbertolino da Silva</span>
-								<span class="hospital">Hospital blah blah</span>
-								<span class="cidade">Fortaleza, CE</span>
+							<div class="tipo col-lg-3">{{paciente.TipoSanguineo}}</div>
+							<div class="texto col-lg-8" ng-click="alert(paciente.Id)">
+								<span class="nome">{{paciente.Nome}}</span>
+								<span class="hospital">{{paciente.Hospital.Nome}}</span>
+								<span class="cidade">{{paciente.Cidade.Nome}}</span>
 							</div>
 						</div>
 					</div>
