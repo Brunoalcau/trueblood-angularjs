@@ -10,7 +10,7 @@
 angular.module('projetoFortesApp')
 	.controller('DoadorCtrl', function($scope,alert) {
 		$scope.listaPaciente = [{
-			"Nome": "Paciente",
+			"Nome": "Francisco",
 			"Hospital": {
 				"Nome": "Hospital"
 			},
@@ -24,7 +24,7 @@ angular.module('projetoFortesApp')
 			"Email": "paciente@gmail.com",
 			"Id": 5
 		}, {
-			"Nome": "Paciente2",
+			"Nome": "Daniel",
 			"TipoSanguineo": 'A+',
 			"Hospital": {
 				"Nome": "Hospital"

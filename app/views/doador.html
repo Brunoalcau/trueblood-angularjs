@@ -13,11 +13,11 @@
 				  <button type="button" class="btn btn-default">AB+</button>
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-6">
-					<input type="text" class="form-control" placeholder="Buscar por Paciente, Hospital e etc..">
+					<input type="text" class="form-control" ng-model="pesquisa" placeholder="Buscar por Paciente, Hospital e etc..">
 				</div>
 			</header>
 			<div class="itens">
-				<div class="item col-lg-6" ng-click="alert(paciente.Id)"  ng-repeat="paciente in listaPaciente">
+				<div class="item col-lg-6" ng-click="alert(paciente.Id)"  ng-repeat="paciente in listaPaciente |filter:pesquisa">
 					<div class="info">
 						<div class="row">
 							<div class="tipo col-lg-3">{{paciente.TipoSanguineo}}</div>
