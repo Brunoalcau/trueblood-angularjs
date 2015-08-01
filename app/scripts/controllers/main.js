@@ -8,10 +8,12 @@
  * Controller of the projetoFortesApp
  */
 angular.module('projetoFortesApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope,alert) {
+   	
+  	$scope.alert = function(){
+  		// alert.sucess('Salvo','Salvo com sucess',"success");
+  		alert.confirmarDoacao();
+  	}
+
+
   });

@@ -8,10 +8,35 @@
  * Controller of the projetoFortesApp
  */
 angular.module('projetoFortesApp')
-  .controller('DoadorCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('DoadorCtrl', function($scope) {
+		$scope.listaPaciente = [{
+				"Nome": "Paciente",
+				"Hospital": {
+					"Nome": "Hospital"
+				},
+				"TipoSanguineo" : 'AB+',
+				"NumeroDoadores": 2,
+				"Prazo": "2015-08-01T12:31:29.4975515-03:00",
+				"Cidade": {
+					"Nome": "Fortaleza",
+					"Estado": "Ceará"
+				},
+				"Email": "paciente@gmail.com",
+				"Id": 5
+			}, {
+				"Nome": "Paciente2",
+				"TipoSanguineo" : 'A+',
+				"Hospital": {
+					"Nome": "Hospital"
+				},
+				"NumeroDoadores": 2,
+				"Prazo": "2015-08-01T12:31:29.4975515-03:00",
+				"Cidade": {
+					"Nome": "Fortaleza",
+					"Estado": "Ceará"
+				},
+				"Email": "paciente@gmail.com",
+				"Id": 5
+			}
+		]
+	});
