@@ -1,3 +1,8 @@
+/* Variaveis
+/* ---------------------------------------------------- */
+$vermelho:      #B71C1C !default;
+
+
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -157,7 +162,7 @@ body {
   .navbar{
     margin: 0;
     border: none;
-    background-color: #E53935;
+    background-color: $vermelho;
     border-radius: 0;
   }
     .navbar-default  .navbar-brand,
@@ -218,4 +223,93 @@ body {
   .text{
     font-size: 3em;
   }
+}
+
+
+
+/* Doador
+/* ---------------------------------------------------- */
+.doador {
+  padding-top: 35px;
+}
+  .timeline {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+    .timeline .filtro {
+      display: table;
+      width: 100%;
+      background-color: $vermelho;
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
+      .timeline .filtro .btn {
+        height: 34px;
+        color: $vermelho;
+        font-weight: bold;
+        border: none;
+      }
+      .timeline .filtro .btn:focus { outline: none; }
+      .timeline .filtro .btn.ativo {
+        background-color: $vermelho;
+        color: #FFFFFF;
+        pointer-events: none;
+        cursor: default;
+      }
+
+    .timeline .itens {
+      margin-top: 40px;
+    }
+      .timeline .itens .item {
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+        .timeline .itens .item .info {
+          display: table;
+          width: 100%;
+          background-color: #EEEEEE;
+          overflow: hidden;
+        }
+        .timeline .itens .item .info:hover {
+          background-color: #DDDDDD;
+        }
+          .timeline .itens .item .info .tipo {
+            min-height: 60px;
+            background-color: $vermelho;
+            color: #FFFFFF;
+            font-size: 2em;
+            text-align: center;
+            font-weight: bold;
+            line-height: 60px;
+            margin-left: 15px;
+          }
+          .timeline .itens .item .info span {
+            display: block;
+            font-size: .9em;
+          }
+          .timeline .itens .item .info .nome {
+            font-size: 1em;
+            font-weight: bold;
+          }
+
+
+
+
+
+/* Media Query
+/* ---------------------------------------------------- */
+@media( max-width: 1200px ) {
+  .timeline .filtro .btn {
+    padding: 5px 10px;
+  }
+}
+
+
+@media( max-width: 992px ) {
+  .timeline .filtro { text-align: center; }
+    .timeline .filtro .btn {
+      padding: 5px 24px;
+      margin-bottom: 10px;
+    }
 }
