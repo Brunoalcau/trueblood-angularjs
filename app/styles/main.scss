@@ -17,6 +17,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: #ECEFF1;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -204,6 +205,24 @@ body {
 /* ---------------------------------------------------- */
 .paciente {
   padding-top: 35px;
+  .top{
+    margin-top:0.5em;
+  }
+}
+
+.none-radius{
+  border-radius: 0px;
+}
+
+.card{
+  background-color: #E53935;
+  color: #ffffff;
+  .icon{
+    font-size: 4em;
+  }
+  .text{
+    font-size: 3em;
+  }
 }
 
 

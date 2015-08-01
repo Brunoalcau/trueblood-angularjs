@@ -1,29 +1,71 @@
 <main class="paciente">
-	<div class="container">
-		<aside id="pacienteMenu" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-			<dl>
-				<dt>Nome</dt>
-				<dd>{{paciente.Nome}}</dd>
-				<dt>Hospital</dt>
-				<dd>{{paciente.Hospital.Nome}}</dd>
-				<dt>Email</dt>
-				<dd>{{paciente.Email}}</dd>
-				<dt>Cidade</dt>
-				<dd>{{paciente.Cidade.Nome}}</dd>
-				<dt>Estado</dt>
-				<dd>{{paciente.Cidade.Estado}}</dd>
-			</dl>
-			<ul class="list-unstyled hidden">
-				<li ng-bind=""></li>
-				<li ng-bind=""></li>
-				<li ng-bind=""></li>
-				<li ng-bind=""></li>
-				<li ng-bind=""></li>
-			</ul>
-		</aside>
+	<div class="container-fluid col-lg-offset-2 col-lg-8">
+		<div id="pacienteMenu" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<aside class="panel panel-default none-radius">
+				<div class="panel-body none-radius">
+					<h2 class="page-header text-danger">Meus dados</h2>
+					<dl>
+						<dt>Nome</dt>
+						<dd>{{paciente.Nome}}</dd>
+						<dt>Hospital</dt>
+						<dd>{{paciente.Hospital.Nome}}</dd>
+						<dt>Email</dt>
+						<dd>{{paciente.Email}}</dd>
+						<dt>Cidade</dt>
+						<dd>{{paciente.Cidade.Nome}}</dd>
+						<dt>Estado</dt>
+						<dd>{{paciente.Cidade.Estado}}</dd>
+					</dl>
+				</div>	
+			</aside>	
+		</div>
+		
 		<!-- /pacienteMenu -->
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-			<form class="form-horizontal">
+			<div class="panel panel-default none-radius">
+				<div class="panel-body none-radius">
+					
+					<div class="col-lg-8">
+						<table class="table table-responsive">
+							<thead>
+								<th>
+									<span class="glyphicon glyphicon-calendar"></span> Data
+								</th>
+								<th>
+									<span class="glyphicon glyphicon-flag"></span>Status
+								</th>
+							</thead>
+							<tbody>
+								<tr ng-repeat="obj in historico">
+									<td>{{obj.date}}</td>
+									<td>{{obj.status}}</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+					<!-- /histórico -->
+					<div class="card col-lg-4 text-center">
+						<div class="col-lg-12 top icon" style="">
+							<span class="glyphicon glyphicon-tint"></span>
+						</div>
+						<div class="col-lg-12 text" style="font-size: 3em">
+							{{5}}/{{10}}
+						</div>
+						<hr class="divider"/>
+						<ul class="list-inline text-center">
+							<li><span class="glyphicon glyphicon-inbox"></span> {{5}}</li>
+							<li><span class="glyphicon glyphicon-calendar"></span> 00/00/0000</li>
+						</ul>
+					</div>
+					<!-- /card -->
+					
+					<div class="col-lg-12 top text-left">
+						<button class="btn btn-success" data-toggle="modal" data-target="#solicitarDoacao">Solicitar Doação</button>
+					</div>
+				</div>
+			</div>
+			
+			<form class="form-horizontal hidden">
 				<div class="form-group">
 					<label class="col-lg-2 control-label">Nome</label>
 					<div class="col-lg-8" ng-model="obj.Nome">
@@ -58,4 +100,31 @@
 		</div>
 		<!-- dash -->
 	</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="solicitarDoacao">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Solicitar Doação</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="form-horizontal">
+				<div class="form-group">
+					<label class="col-lg-4 control-label">Numero de Doadores</label>
+					<div class="col-lg-7">
+						<input type="text" class="form-control" ng-model="nDoadores"/>
+					</div>
+				</div>
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-primary">Solicitar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
 </main>
