@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'hSweetAlert'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,6 +31,10 @@ angular
       .when('/doador', {
         templateUrl: 'views/doador.html',
         controller: 'DoadorCtrl'
+      })
+      .when('/paciente', {
+        templateUrl: 'views/paciente.html',
+        controller: 'PacienteCtrl'
       })
       .otherwise({
         redirectTo: '/'
