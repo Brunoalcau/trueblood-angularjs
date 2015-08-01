@@ -1,6 +1,8 @@
 /* Variaveis
 /* ---------------------------------------------------- */
-$vermelho:      #B71C1C !default;
+$vermelho:          #B71C1C !default;
+$vermelhoClaro:     #D9534F !default;
+$azul:              #496198 !default;
 
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
@@ -165,10 +167,12 @@ body {
     background-color: $vermelho;
     border-radius: 0;
   }
-    .navbar-default  .navbar-brand,
-    .navbar-default  .navbar-brand:hover {
-      color: #FFFFFF;
+    .navbar-default  .navbar-brand {
+      padding: 5px 0;
     }
+      .navbar-default  .navbar-brand img {
+        max-height: 37px;
+      }
     .form-login {
       padding-top: 8px;
     }
@@ -177,26 +181,36 @@ body {
 /* Home Page
 /* ---------------------------------------------------- */
 .home {
-  background: url(../images/bg_home.jpg) top center no-repeat;
-  background-size: 100% auto;
+  background: url(../images/coracao_home.svg) top left no-repeat;
+  background-size: auto 110%;
   height: calc(100vh - 53px);
 }
+  .home .container {
+    position: relative;
+    height: 100vh;
+  }
   .buttons {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: 20%;
+    bottom: 50%;
     left: 0;
-    text-align: center;
+    text-align: right;
+    padding-right: 30px;
   }
     .buttons .btn {
       width: 200px;
       height: 50px;
       text-transform: uppercase;
       font-weight: bold;
+      color: #FFFFFF;
+      background: $azul;
     }
     .buttons .btn:focus {
       outline: none;
+    }
+    .buttons .btn:last-child {
+      background: $vermelhoClaro;
     }
 
 
