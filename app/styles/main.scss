@@ -303,6 +303,10 @@ body {
   .timeline .filtro .btn {
     padding: 5px 10px;
   }
+    .timeline .itens .item .info span {
+      padding: 0 10px;
+    }
+    
 }
 
 
@@ -312,4 +316,33 @@ body {
       padding: 5px 24px;
       margin-bottom: 10px;
     }
+
+}
+
+
+@media( max-width: 765px ) {
+  .timeline .filtro .btn {
+    padding: 5px 4%;
+  }
+}
+
+
+@media( max-width: 616px ) {
+  .timeline .filtro .btn {
+    padding: 5px 10px;
+  }
+}
+
+
+@media( max-width: 485px ) {
+  .timeline .filtro .btn {
+    font-size: 10px;
+  }
+}
+
+
+@media( max-width: 430px ) {
+  .timeline .filtro .btn-group {
+    display: none;
+  }
 }
