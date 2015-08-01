@@ -219,13 +219,14 @@ body {
     margin: 0 auto;
   }
     .timeline .filtro {
-      text-align: center;
+      display: table;
+      width: 100%;
       background-color: $vermelho;
-      padding: 5px;
+      padding: 10px 5px;
       border-radius: 5px;
     }
       .timeline .filtro .btn {
-        padding: 8px 35px;
+        height: 34px;
         color: $vermelho;
         font-weight: bold;
         border: none;
@@ -243,12 +244,16 @@ body {
     }
       .timeline .itens .item {
         margin-bottom: 15px;
-        overflow: hidden;
+        cursor: pointer;
       }
         .timeline .itens .item .info {
           display: table;
           width: 100%;
           background-color: #EEEEEE;
+          overflow: hidden;
+        }
+        .timeline .itens .item .info:hover {
+          background-color: #DDDDDD;
         }
           .timeline .itens .item .info .tipo {
             min-height: 60px;
@@ -268,3 +273,24 @@ body {
             font-size: 1em;
             font-weight: bold;
           }
+
+
+
+
+
+/* Media Query
+/* ---------------------------------------------------- */
+@media( max-width: 1200px ) {
+  .timeline .filtro .btn {
+    padding: 5px 10px;
+  }
+}
+
+
+@media( max-width: 992px ) {
+  .timeline .filtro { text-align: center; }
+    .timeline .filtro .btn {
+      padding: 5px 24px;
+      margin-bottom: 10px;
+    }
+}
