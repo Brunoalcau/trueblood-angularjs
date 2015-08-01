@@ -1,1 +1,59 @@
-<p>This is the paciente view.</p>
+<section>
+	<aside id="pacienteMenu" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		<dl>
+			<dt>Nome</dt>
+			<dd>{{paciente.Nome}}</dd>
+			<dt>Hospital</dt>
+			<dd>{{paciente.Hospital.Nome}}</dd>
+			<dt>Email</dt>
+			<dd>{{paciente.Email}}</dd>
+			<dt>Cidade</dt>
+			<dd>{{paciente.Cidade.Nome}}</dd>
+			<dt>Estado</dt>
+			<dd>{{paciente.Cidade.Estado}}</dd>
+		</dl>
+		<ul class="list-unstyled hidden">
+			<li ng-bind=""></li>
+			<li ng-bind=""></li>
+			<li ng-bind=""></li>
+			<li ng-bind=""></li>
+			<li ng-bind=""></li>
+		</ul>
+	</aside>
+	<!-- /pacienteMenu -->
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Nome</label>
+				<div class="col-lg-8" ng-model="obj.Nome">
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Email</label>
+				<div class="col-lg-8" ng-model="obj.Email">
+					<input type="email" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Hospital</label>
+				<div class="col-lg-8" ng-model="obj.Hospital.Nome">
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Cidade</label>
+				<div class="col-lg-8" ng-model="obj.Cidade.Nome">
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Estado</label>
+				<div class="col-lg-8" ng-model="obj.Cidade.Estado">
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- dash -->
+</section>
